@@ -11,7 +11,7 @@ $main-bg-cl: #000;
 $black-bg-cl: #000;
 
 // timing transition
-$t: 0.4s;
+$t: 0.6s;
 $cubic: cubic-bezier(0.84, 0.13, 0.33, 0.97);
 
 /*font families*/
@@ -29,7 +29,7 @@ $lh-text-m: normal;
 
 /*BOXED LAYOUT*/
 $container-max-width: 1920px;
-$container-width: 1010px; // tùy thuộc vào container của bản thiết kế mà chỉnh sửa cho hợp lý
+$container-width: 1370px; // tùy thuộc vào container của bản thiết kế mà chỉnh sửa cho hợp lý
 
 /*GRID - media queries breakpoints*/
 $xxs-min: 576px; // CÓ THỂ TÙY CHỈNH

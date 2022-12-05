@@ -1,1 +1,128 @@
 // css header
+h1 {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+}
+
+header {
+    width: 100%;
+    z-index: 100;
+    transition: $t;
+    &.active-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: white;
+        transition: $t;
+
+        .container {
+            transition: $t;
+
+            .menu-logo {
+                transition: $t;
+                .menu-logo-item {
+                    transition: $t;
+                    a {
+                        visibility: visible;
+                        opacity: 1;
+                        transition: $t;
+                        display: block;
+                    }
+                }
+                .logo {
+                    width: 100px;
+                    height: 50px;
+                    margin: 20px 0;
+                    transition: $t;
+                }
+            }
+
+            ul {
+                transition: $t;
+                margin-bottom: 0px;
+                li {
+                    transition: $t;
+                    a {
+                        opacity: 0;
+                        visibility: hidden;
+                        display: none;
+                        transition: $t;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        transition: $t;
+
+        .menu-logo {
+            transition: $t;
+            .menu-logo-item {
+                transition: $t;
+                a {
+                    text-decoration: none;
+                    transition: $t;
+                    visibility: hidden;
+                    opacity: 0;
+                    font-size: 14px;
+                    &.activeMenu {
+                        transition: $t;
+                        visibility: visible;
+                        opacity: 1;
+                        transition: $t;
+                    }
+                }
+            }
+            .logo {
+                width: 357px;
+                height: 93px;
+                margin: 78px 0;
+                transition: $t;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 14px;
+            transition: $t;
+
+            li {
+                a {
+                    @include text(18px, LBR, 23px, #b6b6b6, uppercase);
+                    text-decoration: none;
+                    cursor: pointer;
+                    transition: $t;
+                    &.activeMenu {
+                        transition: $t;
+                        visibility: visible;
+                        opacity: 1;
+                        transition: $t;
+                    }
+                }
+                padding: 0 13px;
+                transition: $t;
+                &:hover {
+                    transition: $t;
+                    a {
+                        transition: $t;
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+}

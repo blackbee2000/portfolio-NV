@@ -1,5 +1,150 @@
-// CSS HOMEPAGE
-h1 {
-    font-size: 60px;
-    color: red;
+.project {
+    height: 640px;
+    width: 100%;
+    margin-top: 60px;
+    &:last-child {
+        margin-bottom: 100px;
+    }
+    &.home {
+        transition: $t;
+        &.active-home {
+            margin-top: 250px;
+            transition: $t;
+        }
+    }
+    .container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    &__img {
+        width: 100%;
+        height: 100%;
+        margin-right: 73px;
+        overflow: hidden;
+        position: relative;
+        &:last-child {
+            margin-right: 0px;
+        }
+        transition: $t;
+        img {
+            width: 100%;
+            height: 100%;
+            @include midimg();
+            transition: $t;
+            transform: translate(-50%, -50%) scale(1);
+        }
+        &:hover {
+            transition: $t;
+            img {
+                transition: $t;
+                transform: translate(-50%, -50%) scale(1.15);
+            }
+        }
+    }
+}
+
+.banner {
+    width: 100%;
+    height: 640px;
+    margin-top: 60px;
+    transition: $t;
+    &.active-banner {
+        margin-top: 250px;
+        transition: $t;
+    }
+    .container {
+        height: 100%;
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+        transition: $t;
+        img {
+            width: 100%;
+            @include midimg();
+            transition: $t;
+            transform: translate(-50%, -50%) scale(1);
+        }
+        &:hover {
+            transition: $t;
+            img {
+                transition: $t;
+                transform: translate(-50%, -50%) scale(1.15);
+            }
+        }
+    }
+}
+
+.about {
+    width: 100%;
+    height: 700px;
+    transition: $t;
+    &.about-top {
+        transition: $t;
+        &.active-about {
+            margin-top: 250px;
+            transition: $t;
+        }
+    }
+    &:first-child {
+        margin-top: 60px;
+    }
+    &:last-child {
+        margin-bottom: 100px;
+    }
+    .container {
+        height: 100%;
+        display: flex;
+    }
+    &.reverse {
+        margin-top: -40px;
+        .container {
+            flex-direction: row-reverse;
+        }
+    }
+    &__img {
+        width: 40%;
+        height: 100%;
+        &_img {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+            transition: $t;
+            img {
+                width: 100%;
+                @include midimg();
+                transition: $t;
+                transform: translate(-50%, -50%) scale(1);
+            }
+            &:hover {
+                transition: $t;
+                img {
+                    transition: $t;
+                    transform: translate(-50%, -50%) scale(1.15);
+                }
+            }
+        }
+    }
+    &__text {
+        width: 60%;
+        height: 100%;
+        padding-left: 20px;
+        padding-bottom: 15%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        &_name {
+            @include text(46px, LBR, 59px, #000000, uppercase);
+            padding-bottom: 20px;
+        }
+        &_sub {
+            @include text(20px, LBR, 26px, #000000, none);
+        }
+    }
 }
